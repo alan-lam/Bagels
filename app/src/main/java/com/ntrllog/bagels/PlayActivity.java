@@ -1,5 +1,6 @@
 package com.ntrllog.bagels;
 
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -7,9 +8,12 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
 public class PlayActivity extends AppCompatActivity {
 
     private int numDigits = 0;
+    private char[] randomNumber;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,5 +46,35 @@ public class PlayActivity extends AppCompatActivity {
         TextView instructionsTextView = findViewById(R.id.instructions);
         String instructions = getString(R.string.instructions, this.numDigits);
         instructionsTextView.setText(instructions);
+
+        generateRandomNumber();
+
+        TextView actualNumberTextView = findViewById(R.id.actual_number);
+        String actualNumber = getString(R.string.actual_number, new String(this.randomNumber));
+        actualNumberTextView.setText(actualNumber);
+        actualNumberTextView.setTypeface(null, Typeface.BOLD);
+    }
+
+    private void generateRandomNumber() {
+        this.randomNumber = new char[this.numDigits];
+        char[] array = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+        char[] shuffled = shuffleArray(array);
+        for (int i = 0; i < this.numDigits; i++) {
+            this.randomNumber[i] = shuffled[i];
+        }
+    }
+
+    /* https://stackoverflow.com/questions/1519736/random-shuffling-of-an-array */
+    private char[] shuffleArray(char[] array) {
+        Random random = new Random();
+        int index;
+        char temp;
+        for (int i = array.length - 1; i > 0; i--) {
+            index = random.nextInt(i + 1);
+            temp = array[index];
+            array[index] = array[i];
+            array[i] = temp;
+        }
+        return array;
     }
 }

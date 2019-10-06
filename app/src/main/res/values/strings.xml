@@ -6,7 +6,7 @@
     <string name="hard">Hard</string>
     <string name="impossible">Impossible?</string>
 
-    <string name="instructions">I am thinking of a %1$d-digit number. Try to guess what it is.\n
+    <string name="instructions">I am thinking of a %1$d-digit number (it can start with 0). Try to guess what it is.\n
         P: One digit is correct but in the wrong position.\n
         F: One digit is correct and in the right position.\n
         B: No digit is correct.\n
@@ -36,5 +36,5 @@
     <string name="key_delete">X</string>
     <string name="key_check">\u2713</string>
 
-    <string name="actual_number">The number was %1$d</string>
+    <string name="actual_number">The number was %1$s</string>
 </resources>
