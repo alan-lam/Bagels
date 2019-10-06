@@ -1,6 +1,5 @@
 package com.ntrllog.bagels;
 
-import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -49,10 +48,10 @@ public class PlayActivity extends AppCompatActivity {
 
         generateRandomNumber();
 
-        TextView actualNumberTextView = findViewById(R.id.actual_number);
+        /*TextView actualNumberTextView = findViewById(R.id.actual_number);
         String actualNumber = getString(R.string.actual_number, new String(this.randomNumber));
         actualNumberTextView.setText(actualNumber);
-        actualNumberTextView.setTypeface(null, Typeface.BOLD);
+        actualNumberTextView.setTypeface(null, Typeface.BOLD);*/
     }
 
     private void generateRandomNumber() {
