@@ -39,4 +39,8 @@
     <string name="actual_number">The number was %1$s</string>
 
     <string name="correct">Correct!</string>
+
+    <string name="exit_message">Exit the game?</string>
+    <string name="exit">Exit</string>
+    <string name="stay">Stay</string>
 </resources>

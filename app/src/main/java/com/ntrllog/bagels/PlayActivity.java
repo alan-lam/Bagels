@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import java.util.Random;
 
@@ -172,5 +173,11 @@ public class PlayActivity extends AppCompatActivity {
         }
 
         return new String(shuffleArray(hintsArray));
+    }
+
+    @Override
+    public void onBackPressed() {
+        DialogFragment dialogFragment = new ExitDialogFragment(getApplicationContext());
+        dialogFragment.show(getSupportFragmentManager(), "exit");
     }
 }
