@@ -27,13 +27,15 @@
 
             <TextView
                 android:id="@+id/guess_one"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/one" />
 
             <TextView
                 android:id="@+id/hint_one"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="" />
 
@@ -48,13 +50,15 @@
 
             <TextView
                 android:id="@+id/guess_six"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/six" />
 
             <TextView
                 android:id="@+id/hint_six"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="" />
 
@@ -69,13 +73,15 @@
 
             <TextView
                 android:id="@+id/guess_two"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/two" />
 
             <TextView
                 android:id="@+id/hint_two"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="" />
 
@@ -90,13 +96,15 @@
 
             <TextView
                 android:id="@+id/guess_seven"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/seven" />
 
             <TextView
                 android:id="@+id/hint_seven"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="" />
 
@@ -111,13 +119,15 @@
 
             <TextView
                 android:id="@+id/guess_three"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/three" />
 
             <TextView
                 android:id="@+id/hint_three"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="" />
 
@@ -132,13 +142,15 @@
 
             <TextView
                 android:id="@+id/guess_eight"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/eight" />
 
             <TextView
                 android:id="@+id/hint_eight"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="" />
 
@@ -153,13 +165,15 @@
 
             <TextView
                 android:id="@+id/guess_four"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/four" />
 
             <TextView
                 android:id="@+id/hint_four"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="" />
 
@@ -174,13 +188,15 @@
 
             <TextView
                 android:id="@+id/guess_nine"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/nine" />
 
             <TextView
                 android:id="@+id/hint_nine"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="" />
 
@@ -195,13 +211,15 @@
 
             <TextView
                 android:id="@+id/guess_five"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/five" />
 
             <TextView
                 android:id="@+id/hint_five"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="" />
 
@@ -216,13 +234,15 @@
 
             <TextView
                 android:id="@+id/guess_ten"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/ten" />
 
             <TextView
                 android:id="@+id/hint_ten"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="" />
 
@@ -246,61 +266,85 @@
 
         <Button
             android:text="@string/key_zero"
+            android:tag="0"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_one"
+            android:tag="1"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_two"
+            android:tag="2"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_three"
+            android:tag="3"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_four"
+            android:tag="4"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_delete"
+            android:tag="delete"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_five"
+            android:tag="5"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_six"
+            android:tag="6"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_seven"
+            android:tag="7"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_eight"
+            android:tag="8"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_nine"
+            android:tag="9"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 
         <Button
             android:text="@string/key_check"
+            android:tag="check"
+            android:onClick="onClick"
             android:layout_width="0dp"
             android:layout_columnWeight="1"/>
 

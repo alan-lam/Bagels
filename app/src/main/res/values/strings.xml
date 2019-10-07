@@ -37,4 +37,6 @@
     <string name="key_check">\u2713</string>
 
     <string name="actual_number">The number was %1$s</string>
+
+    <string name="correct">Correct!</string>
 </resources>
