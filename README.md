@@ -2,6 +2,8 @@
 
 An Android app of a numbers-deduction game
 
+App available on ["Google Play Store"](https://play.google.com/store/apps/details?id=com.ntrllog.bagels)
+
 APK available at the ["release"](https://github.com/alan-lam/Bagels/releases) section
 
 ## Screenshots
