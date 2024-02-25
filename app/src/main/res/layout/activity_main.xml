@@ -6,7 +6,7 @@
     android:layout_gravity="center"
     android:columnCount="1"
     android:rowCount="4"
-    tools:context=".MainActivity">
+    tools:context="ntrllog.github.io.bagels.MainActivity">
 
     <Button
         android:id="@+id/easy_button"

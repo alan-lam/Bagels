@@ -9,8 +9,7 @@
     <string name="instructions">I am thinking of a %1$d-digit number (it can start with 0). Try to guess what it is.\n
         P: One digit is correct but in the wrong position.\n
         F: One digit is correct and in the right position.\n
-        B: No digit is correct.\n
-        Go back to start a new game.</string>
+        B: No digit is correct.</string>
 
     <string name="one">1)</string>
     <string name="two">2)</string>
@@ -43,4 +42,5 @@
     <string name="exit_message">Exit the game?</string>
     <string name="exit">Exit</string>
     <string name="stay">Stay</string>
+    <string name="retry">Retry</string>
 </resources>
