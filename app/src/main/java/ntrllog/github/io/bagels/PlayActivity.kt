@@ -8,7 +8,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.DialogFragment
 
 class PlayActivity : AppCompatActivity() {
@@ -21,6 +23,15 @@ class PlayActivity : AppCompatActivity() {
     private var digitsEntered = "" // number that the user has entered so far for each question
     private var originalIntent: Intent? = null
 
+    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+            val dialogFragment: DialogFragment = ExitDialogFragment(
+                applicationContext
+            )
+            dialogFragment.show(supportFragmentManager, "exit")
+        }
+    }
+
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game_layout)
@@ -28,22 +39,22 @@ class PlayActivity : AppCompatActivity() {
         when (numDigits) {
             3 -> {
                 supportActionBar!!.setTitle(R.string.easy)
-                supportActionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.easyButton)))
+                supportActionBar!!.setBackgroundDrawable(ColorDrawable(ResourcesCompat.getColor(resources, R.color.easyButton, theme)))
             }
 
             4 -> {
                 supportActionBar!!.setTitle(R.string.medium)
-                supportActionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.mediumButton)))
+                supportActionBar!!.setBackgroundDrawable(ColorDrawable(ResourcesCompat.getColor(resources, R.color.mediumButton, theme)))
             }
 
             5 -> {
                 supportActionBar!!.setTitle(R.string.hard)
-                supportActionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.hardButton)))
+                supportActionBar!!.setBackgroundDrawable(ColorDrawable(ResourcesCompat.getColor(resources, R.color.hardButton, theme)))
             }
 
             6 -> {
                 supportActionBar!!.setTitle(R.string.impossible)
-                supportActionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.impossibleButton)))
+                supportActionBar!!.setBackgroundDrawable(ColorDrawable(ResourcesCompat.getColor(resources, R.color.impossibleButton, theme)))
             }
         }
 
@@ -54,6 +65,8 @@ class PlayActivity : AppCompatActivity() {
         randomNumberList = generateRandomNumber()
 
         originalIntent = intent
+
+        onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
     }
 
     private fun generateRandomNumber(): List<Char> {
@@ -170,12 +183,4 @@ class PlayActivity : AppCompatActivity() {
             }
             return hintsList.joinToString("")
         }
-
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-        val dialogFragment: DialogFragment = ExitDialogFragment(
-            applicationContext
-        )
-        dialogFragment.show(supportFragmentManager, "exit")
-    }
 }

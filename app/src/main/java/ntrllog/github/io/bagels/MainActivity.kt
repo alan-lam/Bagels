@@ -3,9 +3,16 @@ package ntrllog.github.io.bagels
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+            finishAffinity() // exit app instead of going to previous activity
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,10 +40,6 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("NUM_DIGITS", 6)
             startActivity(intent)
         }
-    }
-
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-        finishAffinity() // exit app instead of going to previous activity
+        onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
     }
 }

@@ -11,11 +11,11 @@ class ExitDialogFragment(private val context: Context) : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(activity)
         builder.setMessage(R.string.exit_message)
-            .setPositiveButton(R.string.exit) { dialog, id ->
+            .setPositiveButton(R.string.exit) { _, _ ->
                 val intent = Intent(context, MainActivity::class.java)
                 startActivity(intent)
             }
-            .setNegativeButton(R.string.stay) { dialog, id -> }
+            .setNegativeButton(R.string.stay) { _, _ -> }
         return builder.create()
     }
 }
