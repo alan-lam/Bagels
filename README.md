@@ -6,8 +6,8 @@ App available on [Google Play Store](https://play.google.com/store/apps/details?
 
 ## Screenshots
 
-![Alt text](./pictures/home.jpg?raw=true)
-![Alt text](./pictures/easy.jpg?raw=true)
-![Alt text](./pictures/medium.jpg?raw=true)
-![Alt text](./pictures/hard.jpg?raw=true)
-![Alt text](./pictures/impossible.jpg?raw=true)
+![Alt text](./screenshots/home.jpg?raw=true)
+![Alt text](./screenshots/easy.jpg?raw=true)
+![Alt text](./screenshots/medium.jpg?raw=true)
+![Alt text](./screenshots/hard.jpg?raw=true)
+![Alt text](./screenshots/impossible.jpg?raw=true)
